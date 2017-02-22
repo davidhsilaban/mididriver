@@ -49,6 +49,7 @@
 // for EAS midi
 #include "eas.h"
 #include "eas_reverb.h"
+#include "eas_chorus.h"
 
 #define LOG_TAG "MidiDriver"
 
@@ -295,6 +296,12 @@ EAS_RESULT initEAS()
                      EAS_PARAM_REVERB_CHAMBER);
     EAS_SetParameter(pEASData, EAS_MODULE_REVERB, EAS_PARAM_REVERB_BYPASS,
                      EAS_FALSE);
+
+    // select chorus preset and enable
+    EAS_SetParameter(pEASData, EAS_MODULE_CHORUS, EAS_PARAM_CHORUS_PRESET,
+                     EAS_PARAM_CHORUS_PRESET1);
+    EAS_SetParameter(pEASData, EAS_MODULE_CHORUS, EAS_PARAM_CHORUS_BYPASS,
+                     EAS_TRUE);
 
     // open midi stream
     if (result = EAS_OpenMIDIStream(pEASData, &midiHandle, NULL) !=

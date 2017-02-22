@@ -81,7 +81,6 @@ static EAS_RESULT PlayFile (EAS_DATA_HANDLE easData, const char* filename, const
     WAVE_FILE *wFile;
     EAS_INT i;
     EAS_PCM *p;
-    EAS_FILE file;
 
     /* determine the name of the output file */
     wFile = NULL;
@@ -97,9 +96,7 @@ static EAS_RESULT PlayFile (EAS_DATA_HANDLE easData, const char* filename, const
     }
 
     /* call EAS library to open file */
-    file.path = filename;
-    file.fd = 0;
-    if ((reportResult = EAS_OpenFile(easData, &file, &handle)) != EAS_SUCCESS)
+    if ((reportResult = EAS_OpenFile(easData, filename, &handle)) != EAS_SUCCESS)
     {
         { /* dpp: EAS_ReportEx(_EAS_SEVERITY_ERROR, "EAS_OpenFile returned %ld\n", reportResult); */ }
         return reportResult;

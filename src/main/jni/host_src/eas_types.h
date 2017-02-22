@@ -138,11 +138,7 @@ typedef EAS_I32 EAS_FILE_MODE;
 #define EAS_FILE_WRITE  2
 
 /* file locator e.g. filename or memory pointer */
-typedef struct s_eas_file_tag {
-    void *handle;
-    int(*readAt)(void *handle, void *buf, int offset, int size);
-    int(*size)(void *handle);
-} EAS_FILE, *EAS_FILE_LOCATOR;
+typedef const void *EAS_FILE_LOCATOR;
 
 /* handle to stream */
 typedef struct s_eas_stream_tag *EAS_HANDLE;

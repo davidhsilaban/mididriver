@@ -46,10 +46,6 @@ extern "C" {
 extern EAS_RESULT EAS_HWInit(EAS_HW_DATA_HANDLE *hwInstData);
 extern EAS_RESULT EAS_HWShutdown(EAS_HW_DATA_HANDLE hwInstData);
 
-/* threading */
-extern void* EAS_HWRegisterSignalHandler();
-extern EAS_RESULT EAS_HWUnRegisterSignalHandler(void *cookie);
-
 /* memory functions */
 extern void *EAS_HWMemSet(void *s, int c, EAS_I32 n);
 extern void *EAS_HWMemCpy(void *s1, const void *s2, EAS_I32 n);

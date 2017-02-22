@@ -27,10 +27,10 @@
  *----------------------------------------------------------------------------
 */
 
-#ifndef _GUID_1feda229b9a845e996f473c0a80e7220_
-#define _GUID_1feda229b9a845e996f473c0a80e7220_
+#ifndef _GUID_0cbd200ab054487f9ece7d3c8852e426_
+#define _GUID_0cbd200ab054487f9ece7d3c8852e426_
 
-#define _BUILD_VERSION_ "1feda229-b9a8-45e9-96f4-73c0a80e7220"
-#define _BUILD_TIME_ 0x4743badd
+#define _BUILD_VERSION_ "0cbd200a-b054-487f-9ece-7d3c8852e426"
+#define _BUILD_TIME_ 0x4743b9dc
 
-#endif /* _GUID_1feda229b9a845e996f473c0a80e7220_ */
+#endif /* _GUID_0cbd200ab054487f9ece7d3c8852e426_ */
